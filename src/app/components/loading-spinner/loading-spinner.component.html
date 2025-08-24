@@ -1,0 +1,7 @@
+<form (ngSubmit)="onSubmit()">
+  <input ... />
+  <button type="submit" [disabled]="(loadingService.loading$ | async)">Confirm</button>
+</form>
+
+<!-- Spinner Global -->
+<app-spinner *ngIf="loadingService.loading$ | async"></app-spinner>

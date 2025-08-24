@@ -1,0 +1,16 @@
+<div class="otp-container">
+  <h2>Confirm OTP</h2>
+  <form (ngSubmit)="onSubmit()">
+    <input type="email" [(ngModel)]="email" name="email" readonly placeholder="Email"/>
+
+    <input type="text" [(ngModel)]="otp" name="otp" required placeholder="OTP"/>
+
+    <button type="submit" [disabled]="loadingService.loading$ | async">Confirm</button>
+
+  </form>
+
+  <p *ngIf="backendError" class="error">{{ backendError }}</p>
+  <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+
+    <button (click)="location.back()">← Back</button>
+</div>

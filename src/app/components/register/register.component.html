@@ -1,0 +1,35 @@
+<div class="register-container">
+  <h2>Register</h2>
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="name" name="name" required placeholder="Full Name" />
+
+    <input type="email" [(ngModel)]="email" name="email" required placeholder="Email" />
+
+    <div class="password-field">
+      <input [type]="passwordVisible ? 'text' : 'password'" [(ngModel)]="password" name="password" required
+        placeholder="Password" />
+      <span class="toggle-eye" (click)="togglePasswordVisibility()">
+        <i class="fa" [ngClass]="passwordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+      </span>
+    </div>
+    <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
+
+    <div class="password-field">
+      <input [type]="confirmPasswordVisible ? 'text' : 'password'" [(ngModel)]="confirmPassword" name="confirmPassword"
+        required placeholder="Confirm Password" />
+      <span class="toggle-eye" (click)="toggleConfirmPasswordVisibility()">
+        <i class="fa" [ngClass]="confirmPasswordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+      </span>
+    </div>
+    <div *ngIf="confirmPasswordError" class="error">{{ confirmPasswordError }}</div>
+
+
+    <button type="submit" [disabled]="loadingService.loading$ | async">Register</button>
+
+  </form>
+
+  <p *ngIf="backendError" class="error">{{ backendError }}</p>
+  <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+
+  <p><a routerLink="/login">Have Account? Click Here</a></p>
+</div>

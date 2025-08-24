@@ -1,0 +1,344 @@
+<div *ngIf="loadingService.loading$ | async">
+  <app-spinner></app-spinner>
+</div>
+
+<div *ngIf="overview">
+  <div class="cards-container">
+    <div class="card" (click)="router.navigate(['/users'])">
+      <h3>Total Users</h3>
+      <p>{{ overview.totalUsers }}</p>
+    </div>
+    <div class="card" (click)="router.navigate(['/projects'])">
+      <h3>Active Projects</h3>
+      <p>{{ overview.totalProjects }}</p>
+    </div>
+    <div class="card" (click)="router.navigate(['/tasks'])">
+      <h3>Tasks Completed</h3>
+      <p>{{ overview.taskStats.completedTasks }}</p>
+    </div>
+    <div class="card" (click)="router.navigate(['/tasks'])">
+      <h3>Tasks In Progress</h3>
+      <p>{{ overview.taskStats.inProgressTasks }}</p>
+    </div>
+    <div class="card" (click)="router.navigate(['/tasks'])">
+      <h3>Tasks Pending</h3>
+      <p>{{ overview.taskStats.pendingTasks }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="filters">
+  <input placeholder="Search..." [(ngModel)]="searchTerm" (ngModelChange)="search()">
+  <select [(ngModel)]="selectedRole" (change)="search()">
+    <option value="">All Roles</option>
+    <option value="Admin">Admin</option>
+    <option value="ProjectManager">Project Manager</option>
+    <option value="TeamMember">Team Member</option>
+  </select>
+  <input type="date" [(ngModel)]="fromDate" (change)="search()">
+  <input type="date" [(ngModel)]="toDate" (change)="search()">
+  <button (click)="search()">Search</button>
+  <!-- Create Button -->
+  <div class="dropdown">
+    <button class="dropbtn" (click)="toggleCreateMenu()">Create</button>
+    <div class="dropdown-content" *ngIf="createMenuOpen">
+      <a (click)="openCreateUserModal()">Create User</a>
+      <a (click)="openCreateProjectModal()">Create Project</a>
+      <a (click)="openCreateTaskModal()">Create Task</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- User Modal -->
+<div class="modal" [class.show]="showUserModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModals()">&times;</span>
+    <h2>Create User</h2>
+    <form (ngSubmit)="createUser()" #userForm="ngForm">
+      <input type="text" placeholder="Full Name" [(ngModel)]="userDto.name" name="name" required>
+      <input type="email" placeholder="Email" [(ngModel)]="userDto.email" name="email" required>
+      <input type="password" placeholder="Password" [(ngModel)]="userDto.password" name="password" required>
+
+      <select [(ngModel)]="userDto.role" name="role" required>
+        <option value="">Select Role</option>
+        <option [value]="0">Admin</option>
+        <option [value]="1">Project Manager</option>
+        <option [value]="2">Team Member</option>
+      </select>
+
+      <button class="save-btn" type="submit">Create</button>
+    </form>
+  </div>
+</div>
+
+<!-- Project Modal -->
+<div class="modal" [class.show]="showProjectModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModals()">&times;</span>
+    <h2>Create Project</h2>
+    <form (ngSubmit)="createProject()">
+      <input type="text" placeholder="Title" [(ngModel)]="projectDto.name" name="title" required>
+      <textarea placeholder="Description" [(ngModel)]="projectDto.description" name="description"></textarea>
+
+      <select [(ngModel)]="projectDto.projectManagerId" name="projectManagerId" required>
+        <option value="">Select Manager</option>
+        <option *ngFor="let manager of projectManagers" [value]="manager.id">
+          {{ manager.name }}
+        </option>
+      </select>
+
+      <button type="submit" class="save-btn">Create Project</button>
+    </form>
+  </div>
+</div>
+
+<!-- Task Modal -->
+<div class="modal" [class.show]="showTaskModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModals()">&times;</span>
+    <h2>Create Task</h2>
+    <form (ngSubmit)="createTask()">
+      <input type="text" placeholder="Title" [(ngModel)]="taskDto.title" name="title" required>
+      <textarea placeholder="Description" [(ngModel)]="taskDto.description" name="description"></textarea>
+      <input type="number" placeholder="% Complete" [(ngModel)]="taskDto.percentComplete" name="percentComplete" min="0"
+        max="100">
+
+      <select [(ngModel)]="taskDto.projectId" name="projectId" required>
+        <option value="">Select Project</option>
+        <option *ngFor="let project of projects" [value]="project.id">{{ project.name }}</option>
+      </select>
+
+      <!-- Team Member Search -->
+      <div class="team-member-search-overlay">
+        <input type="text" placeholder="Search Team Member..." [(ngModel)]="teamMemberSearch"
+          [ngModelOptions]="{standalone: true}" (input)="onTeamMemberInput()" (focus)="showSuggestions = true" />
+
+        <ul *ngIf="showSuggestions && filteredTeamMembers.length > 0" class="suggestions-overlay">
+          <li *ngFor="let member of filteredTeamMembers" (click)="selectTeamMember(member)">
+            {{ member.name }}
+          </li>
+        </ul>
+      </div>
+
+      <input type="date" [(ngModel)]="taskDto.startDate" name="startDate" required>
+      <input type="date" [(ngModel)]="taskDto.finishDate" name="finishDate">
+
+      <button type="submit" class="save-btn">Create Task</button>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="users.length === 0">
+  <p class="no-results">No results found.</p>
+</div>
+
+<div *ngIf="users.length > 0" class="table-container">
+  <table class="custom-table resizable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th (click)="sortData('name')" class="sortable">
+          Name
+          <i class="fas" [ngClass]="{
+               'fa-sort': sortColumn !== 'name',
+               'fa-sort-up': sortColumn === 'name' && sortDirection === 'asc',
+               'fa-sort-down': sortColumn === 'name' && sortDirection === 'desc'
+             }"></i>
+        </th>
+
+        <th (click)="sortData('email')" class="sortable">
+          Email
+          <i class="fas" [ngClass]="{
+               'fa-sort': sortColumn !== 'email',
+               'fa-sort-up': sortColumn === 'email' && sortDirection === 'asc',
+               'fa-sort-down': sortColumn === 'email' && sortDirection === 'desc'
+             }"></i>
+        </th>
+
+        <th (click)="sortData('phone')" class="sortable">
+          Phone
+          <i class="fas" [ngClass]="{
+               'fa-sort': sortColumn !== 'phone',
+               'fa-sort-up': sortColumn === 'phone' && sortDirection === 'asc',
+               'fa-sort-down': sortColumn === 'phone' && sortDirection === 'desc'
+             }"></i>
+        </th>
+
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td (click)="openUserDetails(u)" class="clickable">{{ u?.name }}</td>
+        <td>{{ u?.email }}</td>
+        <td (click)="openPhoneModal(u)" class="clickable">
+          {{ u?.phone || 'No Contact' }}
+        </td>
+        <td>
+          <select [value]="u?.role" (change)="confirmRoleChange(u, $event)">
+            <option value="Admin">Admin</option>
+            <option value="ProjectManager">Manager</option>
+            <option value="TeamMember">User</option>
+          </select>
+        </td>
+        <td class="action-cell">
+          <div class="action-half delete" (click)="openDeleteModal(u)">
+            <i class="fas fa-trash-alt"></i>
+          </div>
+          <div class="action-half details" (click)="openUserDetails(u)">
+            <i class="fas fa-eye"></i>
+          </div>
+          <div class="action-half edit" (click)="openUserEditModal(u)">
+            <i class="fas fa-edit"></i>
+          </div>
+        </td>
+    </tbody>
+  </table>
+</div>
+
+<!-- ----------------- Phone Modal ----------------- -->
+<div class="modal" [class.show]="showPhoneModal" (click)="closePhoneModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h3>Edit Phone for {{ selectedUser?.name }}</h3>
+    <input [(ngModel)]="NewPhone" placeholder="New Phone" maxlength="11" />
+    <div class="modal-buttons">
+      <button (click)="updatePhone()">Save</button>
+      <button (click)="closePhoneModal()" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ----------------- Role Modal ----------------- -->
+<div class="modal" [class.show]="showRoleModal" (click)="cancelRoleChange()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <p>
+      Are you sure you want to change
+      <strong>{{ selectedRoleChange?.user?.name }}</strong>
+      to <strong>{{ selectedRoleChange?.NewRole }}</strong>?
+    </p>
+    <div class="modal-buttons">
+      <button (click)="changeRoleConfirmed()">Yes</button>
+      <button (click)="cancelRoleChange()" class="cancel-btn">No</button>
+    </div>
+  </div>
+</div>
+
+<!-- ----------------- Delete Modal ----------------- -->
+<div class="modal" [class.show]="showDeleteModal" (click)="closeDeleteModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h3>Delete User</h3>
+    <p>
+      Type your admin email to delete
+      <strong>{{ selectedUserForDelete?.name }}</strong>
+    </p>
+    <input type="email" [(ngModel)]="deleteEmailInput" placeholder="Enter your admin email"
+      (input)="checkEmailAndDelete()" />
+    <p class="error" *ngIf="deleteError">{{ deleteError }}</p>
+  </div>
+</div>
+
+<!-- ----------------- User Details Modal ----------------- -->
+<div class="modal" [class.show]="showModalUserDetails" (click)="closeUserDetails()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h3>User Details</h3>
+    <p><strong>Name:</strong> {{ selectedUser?.name }}</p>
+    <p><strong>Email:</strong> {{ selectedUser?.email }}</p>
+    <p><strong>Phone:</strong> {{ selectedUser?.phone }}</p>
+    <p><strong>Role:</strong> {{ selectedUser?.role }}</p>
+    <p>Projects:
+      <span *ngFor="let p of selectedUser?.Projects">
+        <a [routerLink]="['/project', p.id]">{{ p.name }}</a>
+      </span>
+    </p>
+    <p>Tasks:
+      <span *ngFor="let t of selectedUser?.Tasks">
+        <a [routerLink]="['/task', t.id]">{{ t.title }}</a>
+      </span>
+    </p>
+    <div class="modal-buttons">
+      <button (click)="closeUserDetails()" class="cancel-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- User Edit Modal -->
+<div class="modal" [class.show]="showUserEditModal" (click)="closeUserEditModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h3>Edit User</h3>
+
+    <form>
+      <label>Name</label>
+      <input [(ngModel)]="editUserDto.name" name="name" />
+
+      <label>Email</label>
+      <input [(ngModel)]="editUserDto.email" name="email" type="email" />
+
+      <label>Phone</label>
+      <input [(ngModel)]="editUserDto.phone" name="phone" maxlength="11" />
+
+      <label>Role</label>
+      <select [(ngModel)]="editUserDto.role" name="role">
+        <option value="Admin">Admin</option>
+        <option value="ProjectManager">Manager</option>
+        <option value="TeamMember">User</option>
+      </select>
+    </form>
+
+    <div class="modal-buttons">
+      <button (click)="openConfirmSaveModal()">Save</button>
+      <button (click)="closeUserEditModal()" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- Save Confirmation Modal -->
+<div class="modal" [class.show]="showConfirmSaveModal" (click)="closeConfirmSaveModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <p>Are you sure you want to save changes for <strong>{{ editUserDto.name }}</strong>?</p>
+    <div class="modal-buttons">
+      <button (click)="saveUserChanges()">Yes</button>
+      <button (click)="closeConfirmSaveModal()">No</button>
+    </div>
+  </div>
+</div>
+
+<!-- ----------------- Toast ----------------- -->
+<div class="toast" *ngIf="showToast">{{ toastMessage }}</div>
+<div class="toast danger" *ngIf="showToastBoxDelete">{{ toastMessageDelete }}</div>
+
+
+<div class="pagination">
+  <button [disabled]="page===1" (click)="changePage(page-1)">Prev</button>
+  <span>Page {{ page }}</span>
+  <button [disabled]="page * pageSize >= totalUsers" (click)="changePage(page+1)">Next</button>
+  <select (change)="onPageSizeChange($event)">
+    <option value="10">10</option>
+    <option value="25">25</option>
+  </select>
+
+</div>
+
+<!-- User Details Modal -->
+<div class="modal-overlay" *ngIf="showModalUserDetails" (click)="closeUserDetails()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <h3>{{ selectedUser?.name }}</h3>
+    <p>Email: {{ selectedUser?.email }}</p>
+    <p>Phone: {{ selectedUser?.phone || 'No Contact' }}</p>
+    <p>Role: {{ selectedUser?.role }}</p>
+    <p>Projects:
+      <span *ngFor="let p of selectedUser?.Projects">
+        <a [routerLink]="['/project', p.id]">{{ p.name }}</a>
+      </span>
+    </p>
+    <p>Tasks:
+      <span *ngFor="let t of selectedUser?.Tasks">
+        <a [routerLink]="['/task', t.id]">{{ t.title }}</a>
+      </span>
+    </p>
+    <button (click)="closeUserDetails()">Close</button>
+  </div>
+</div>

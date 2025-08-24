@@ -1,0 +1,867 @@
+/* -------------------- Variables -------------------- */
+$border-radius: 12px;
+$box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+$transition-speed: 0.35s ease-in-out;
+
+/* Light Theme */
+$light-primary: #0191da;
+$light-accent: #0070a8;
+$light-bg: #fafafa;
+$light-surface: #ffffff;
+$light-text-primary: #0F172A;
+$light-text-secondary: #64748B;
+
+/* Dark Theme */
+$dark-primary: #4dafff;
+$dark-accent: #00bcd4;
+$dark-bg: #0B1120;
+$dark-surface: #1E293B;
+$dark-text-primary: #E2E8F0;
+$dark-text-secondary: #94A3B8;
+
+/* -------------------- Theme Variables -------------------- */
+:root {
+  --primary: #{$light-primary};
+  --accent: #{$light-accent};
+  --bg: #{$light-bg};
+  --surface: #{$light-surface};
+  --text-primary: #{$light-text-primary};
+  --text-secondary: #{$light-text-secondary};
+  --radius: #{$border-radius};
+  --shadow: #{$box-shadow};
+  --transition: #{$transition-speed};
+}
+
+[data-theme="dark"] {
+  --primary: #{$dark-primary};
+  --accent: #{$dark-accent};
+  --bg: #{$dark-bg};
+  --surface: #{$dark-surface};
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+}
+
+/* -------------------- Base -------------------- */
+.projects-page {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding: 24px;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* -------------------- Header / Filters -------------------- */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 1.8rem;
+    color: var(--primary);
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    input, select, ng-select {
+      flex: 1 1 150px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--text-secondary);
+      background: var(--surface);
+      color: var(--text-primary);
+      transition: all var(--transition);
+
+      &:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(var(--primary-rgb),0.2);
+        outline: none;
+      }
+    }
+
+/* -------------------- NgSelect Custom Styling -------------------- */
+.ngselect-sm {
+  width: 100%;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid var(--text-secondary);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+
+  &:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+  }
+
+  ::ng-deep .ng-select-container {
+    padding: 8px 12px;
+    background: var(--surface);
+    color: var(--text-primary);
+  }
+
+  ::ng-deep .ng-dropdown-panel {
+    width: 100% !important;  // نفس عرض الـ ng-select
+    left: 0 !important;      // يبدأ من أول الحافة
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    background: var(--surface);
+    color: var(--text-primary);
+    max-height: 250px;
+    overflow-y: auto;
+
+    ::ng-deep .ng-option {
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: rgba(var(--primary-rgb),0.1);
+      }
+
+      &.ng-option-selected {
+        background-color: var(--primary);
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* -------------------- Dark Mode Overrides -------------------- */
+[data-theme="dark"] {
+  .ngselect-sm {
+    border: 1px solid var(--text-secondary);
+    background: var(--surface);
+    color: var(--text-primary);
+
+    ::ng-deep .ng-select-container {
+      background: var(--surface);
+      color: var(--text-primary);
+    }
+
+    ::ng-deep .ng-dropdown-panel {
+      background: var(--surface);
+      color: var(--text-primary);
+
+      ::ng-deep .ng-option {
+        color: var(--text-primary);
+
+        &:hover {
+          background-color: rgba(var(--primary-rgb),0.2);
+        }
+
+        &.ng-option-selected {
+          background-color: var(--primary);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+    button {
+      flex: 0 0 auto;
+      background-color: var(--primary);
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 18px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--accent);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+/* -------------------- Cards -------------------- */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: background var(--transition), box-shadow var(--transition);
+
+  h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+}
+
+/* -------------------- Table -------------------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  th, td {
+    padding: 0.85rem;
+    text-align: left;
+    font-size: 14px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--text-secondary);
+  }
+
+  tr:hover {
+    background-color: rgba(var(--primary-rgb),0.1);
+  }
+
+  .badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    &.Pending { background: #facc15; color: #1e3a8a; }
+    &.Active { background: #22c55e; color: #fff; }
+    &.Completed { background: #2563eb; color: #fff; }
+    &.OnHold { background: #f87171; color: #fff; }
+  }
+}
+
+/* -------------------- Modals -------------------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.modal-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+  z-index: 1100;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.modal-card.project {
+  border-top: 4px solid var(--primary-color);
+}
+
+.modal-card.task {
+  border-top: 4px solid var(--success-color);
+}
+
+.modal-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: var(--surface);
+  color: var(--text-primary);
+  border-radius: var(--radius);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  z-index: 1001;
+  transition: background var(--transition), color var(--transition);
+
+  .form-label { font-weight: 600; margin-bottom: 4px; }
+
+  input, select, textarea {
+    width: 85%;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--text-secondary);
+    background: var(--surface);
+    color: var(--text-primary);
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb),0.2);
+    }
+  }
+
+  .btn {
+    margin-top: 8px;
+    padding: 10px 18px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+
+    &.btn-light { background: #c5c5c5; color: var(--text-primary); }
+    &.btn-primary { background: var(--primary); color: #fff; }
+  }
+}
+
+/* Task Modal ng-select */
+.modal-card {
+  ::ng-deep ng-select {
+    width: 90%;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--text-secondary);
+    background: var(--surface);
+    color: var(--text-primary);
+    cursor: pointer;
+
+    &:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+    }
+
+    ::ng-deep .ng-select-container {
+      padding: 8px 12px;
+      background: var(--surface);
+      color: var(--text-primary);
+    }
+
+    ::ng-deep .ng-dropdown-panel {
+      width: 85% !important;
+      left: 0 !important;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      background: var(--surface);
+      color: var(--text-primary);
+      max-height: 200px;
+      overflow-y: auto;
+
+      ::ng-deep .ng-option {
+        padding: 10px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba(var(--primary-rgb),0.1);
+        }
+
+        &.ng-option-selected {
+          background-color: var(--primary);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] {
+  .modal-card {
+    ::ng-deep ng-select {
+      border: 1px solid var(--text-secondary);
+      background: var(--surface);
+      color: var(--text-primary);
+
+      ::ng-deep .ng-dropdown-panel {
+        background: var(--surface);
+        color: var(--text-primary);
+
+        ::ng-deep .ng-option {
+          color: var(--text-primary);
+
+          &:hover {
+            background-color: rgba(var(--primary-rgb), 0.2);
+          }
+
+          &.ng-option-selected {
+            background-color: var(--primary);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.task-modal-buttons {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 1rem;
+  gap: 10px;
+
+  .btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.btn-light {
+      background-color: #c5c5c5;
+      color: var(--text-primary);
+
+      &:hover {
+        background-color: darken(#c5c5c5, 10%);
+      }
+    }
+
+    &.btn-primary {
+      background-color: var(--primary);
+      color: #fff;
+
+      &:hover {
+        background-color: var(--accent);
+      }
+    }
+  }
+}
+/* -------------------- Pagination -------------------- */
+.pagination-wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  .page-link {
+    padding: 8px 14px;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover:not(:disabled) {
+      background: var(--accent);
+    }
+
+    &.disabled { opacity: 0.5; cursor: not-allowed; }
+    &.active { background: var(--accent); font-weight: 600; }
+  }
+}
+
+/* -------------------- Responsive -------------------- */
+@media (max-width: 767px) {
+  .filters { flex-direction: column; }
+  .table th, .table td { font-size: 13px; }
+  button { font-size: 14px; padding: 8px 12px; }
+}
+
+/* -------------------- Badges -------------------- */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-align: center;
+  white-space: nowrap;
+  transition: all var(--transition);
+
+  &.Pending { background-color: #facc15; color: #1e3a8a; }
+  &.InProgress { background-color: #3b82f6; color: #fff; }
+  &.Suspended { background-color: #f59e0b; color: #1e1e1e; }
+  &.Completed { background-color: #10b981; color: #fff; }
+}
+
+/* -------------------- Inputs, selects, textareas -------------------- */
+input.form-control, select.form-select, textarea.form-control {
+  border-radius: 8px;
+  border: 1px solid var(--text-secondary);
+  background: var(--surface);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  transition: all var(--transition);
+  width:85%;
+  &:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 145, 218, 0.2);
+    outline: none;
+  }
+}
+
+/* -------------------- Table Hover & Responsive -------------------- */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table {
+  th, td {
+    vertical-align: middle;
+    word-break: break-word;
+  }
+
+  tr:hover {
+    background-color: rgba(0,0,0,0.03);
+  }
+
+  .text-truncate {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .desc-col {
+    max-width: 300px;
+  }
+}
+
+/* -------------------- Modal Buttons -------------------- */
+
+@mixin transition($properties...) {
+  transition: $properties 0.3s ease;
+}
+
+
+.action-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  .action-half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.delete { background-color: rgba(239,68,68,0.2); color: #b91c1c; }
+    &.details { background-color: rgba(37,99,235,0.1); color: #2563eb; }
+    &.edit { background-color: rgba(16,185,129,0.1); color: #059669; }
+
+    &:hover {
+      &.delete { background-color: rgba(239,68,68,0.4); color: red; }
+      &.details { background-color: rgba(37,99,235,0.3); color: #60a5fa; }
+      &.edit { background-color: rgba(16,185,129,0.3); color: #34d399; }
+    }
+
+    i {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+/* -------------------- Pagination -------------------- */
+.pagination-wrap ul.pagination {
+  display: flex;
+  list-style: none;
+  gap: 6px;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.pagination-wrap .page-link {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  transition: all 0.25s ease;
+
+  &:hover:not(.disabled) {
+    background-color: var(--accent);
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &.active {
+    background-color: var(--accent);
+    font-weight: 600;
+  }
+}
+
+/* -------------------- Dark Mode Overrides -------------------- */
+[data-theme="dark"] {
+  .badge.Pending { background-color: #facc15; color: #1e3a8a; }
+  .badge.InProgress { background-color: #60a5fa; color: #fff; }
+  .badge.Suspended { background-color: #fbbf24; color: #1e1e1e; }
+  .badge.Completed { background-color: #34d399; color: #fff; }
+
+  input.form-control, select.form-select, textarea.form-control {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+  }
+
+  .table tr:hover {
+    background-color: rgba(255,255,255,0.05);
+  }
+
+  .pagination-wrap .page-link {
+    background: var(--primary);
+    color: #fff;
+
+    &:hover:not(.disabled) {
+      background: var(--accent);
+    }
+  }
+}
+
+
+/* -------------------- Tasks Buttons -------------------- */
+.tasks-block {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &.btn-primary {
+      background-color: var(--primary);
+      color: #fff;
+      border: none;
+
+      &:hover {
+        background-color: var(--accent);
+        transform: translateY(-1px);
+      }
+    }
+
+    &.btn-success {
+      background-color: #10b981;
+      color: #fff;
+      border: none;
+
+      &:hover {
+        background-color: #059669;
+        transform: translateY(-1px);
+      }
+    }
+
+    &.btn-light {
+      background-color: #e0e0e0;
+      color: var(--text-primary);
+      border: none;
+
+      &:hover {
+        background-color: #d1d1d1;
+        transform: translateY(-1px);
+      }
+    }
+
+    &.btn-outline-primary {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+
+      &:hover {
+        background-color: var(--primary);
+        color: #fff;
+      }
+    }
+
+    &.btn-outline-danger {
+      background: transparent;
+      border: 1px solid #ef4444;
+      color: #ef4444;
+
+      &:hover {
+        background-color: #ef4444;
+        color: #fff;
+      }
+    }
+
+    mat-icon {
+      font-size: 16px;
+      vertical-align: middle;
+    }
+  }
+
+  .d-flex.gap-2 {
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+
+  .table-responsive {
+    margin-top: 10px;
+
+    table {
+      .btn {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+  }
+}
+
+/* -------------------- Dark Mode Override for Tasks Buttons -------------------- */
+[data-theme="dark"] {
+  .tasks-block {
+    .btn {
+      &.btn-light {
+        background-color: #374151;
+        color: #e5e7eb;
+
+        &:hover {
+          background-color: #4b5563;
+        }
+      }
+
+      &.btn-outline-primary {
+        border-color: #60a5fa;
+        color: #60a5fa;
+
+        &:hover {
+          background-color: #60a5fa;
+          color: #fff;
+        }
+      }
+
+      &.btn-outline-danger {
+        border-color: #f87171;
+        color: #f87171;
+
+        &:hover {
+          background-color: #f87171;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+/* -------------------- Project Row Buttons -------------------- */
+.table .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  mat-icon {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  &.btn-outline-primary {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+
+    &:hover {
+      background-color: var(--primary);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+  }
+
+  &.btn-outline-danger {
+    background: transparent;
+    border: 1px solid #ef4444;
+    color: #ef4444;
+
+    &:hover {
+      background-color: #ef4444;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+/* -------------------- Dark Mode Overrides for Project Buttons -------------------- */
+[data-theme="dark"] {
+  .table .btn {
+    &.btn-outline-primary {
+      border-color: #60a5fa;
+      color: #60a5fa;
+
+      &:hover {
+        background-color: #60a5fa;
+        color: #fff;
+      }
+    }
+
+    &.btn-outline-danger {
+      border-color: #f87171;
+      color: #f87171;
+
+      &:hover {
+        background-color: #f87171;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.expand-btn {
+  width: 36px;
+  height: 36px;
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px; 
+  background: var(--card-bg, #f3f4f6);
+  color: var(--text-color, #374151);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-right: 8px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+
+  &:hover {
+    background: var(--primary-color, #3b82f6);
+    color: white;
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  &.expanded {
+    background: var(--primary-color, #3b82f6);
+    color: white;
+  }
+
+  mat-icon {
+    font-size: 22px;
+    transition: transform 0.25s ease;
+  }
+
+  &.expanded mat-icon {
+    transform: rotate(180deg);
+  }
+
+  // Dark mode
+  [data-theme="dark"] & {
+    background: #1f2937;
+    color: #d1d5db;
+    &:hover {
+      background: var(--primary-color, #3b82f6);
+      color: white;
+    }
+  }
+}
+
+
+

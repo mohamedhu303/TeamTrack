@@ -1,0 +1,27 @@
+<div *ngIf="loadingService.loading$ | async">
+  <app-spinner></app-spinner>
+</div>
+
+<div *ngIf="user">
+  <h2>Welcome, {{ user.name }}</h2>
+  <p>Role: {{ roleName }}</p>
+
+  <button routerLink="/projects">Projects</button>
+  <button routerLink="/setting">Settings</button>
+  <button *ngIf="isAdmin" routerLink="/admin-dashboard">Admin Dashboard</button>
+  <button (click)="openLogoutModal()">Logout</button>
+</div>
+
+<!-- Logout Confirmation Modal -->
+<div class="modal-overlay" *ngIf="showLogoutModal" (click)="closeLogoutModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <p>Are you sure you want to logout?</p>
+    <div class="buttons">
+      <button (click)="confirmLogout()">Yes</button>
+      <button (click)="closeLogoutModal()">No</button>
+    </div>
+  </div>
+</div>
+
+
+<p *ngIf="backendError" class="error">{{ backendError }}</p>

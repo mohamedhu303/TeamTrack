@@ -1,0 +1,5 @@
+<div class="alert-container">
+  <div *ngFor="let alert of alerts" class="custom-alert" [ngClass]="alert.type">
+    {{ alert.message }}
+  </div>
+</div>

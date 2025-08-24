@@ -1,0 +1,61 @@
+:root {
+  --surface: #ffffff;
+  --surface-rgb: 255,255,255;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --primary: #1a73e8;
+  --accent: #ff4081;
+  --bg: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --surface: #111827;
+  --surface-rgb: 17,24,39;
+  --text-primary: #e5e7eb;
+  --text-secondary: #94a3b8;
+  --primary: #90caf9;
+  --accent: #ff7ab6;
+  --bg: #0b1220;
+}
+
+html, body, app-root {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+  transition: background-color .6s ease, color .6s ease;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+$light-primary: #0191da;
+$light-accent: #0070a8;
+$light-bg: #fafafa;
+$light-surface: #FFFFFF;
+$light-text-primary: #0F172A;
+$light-text-secondary: #64748B;
+
+$dark-primary: #0191da;
+$dark-accent: #0070a8;
+$dark-bg: #0B1120;
+$dark-surface: #1E293B;
+$dark-text-primary: #E2E8F0;
+$dark-text-secondary: #94A3B8;
+
+:root {
+  --primary: #{$light-primary};
+  --accent: #{$light-accent};
+  --bg: #{$light-bg};
+  --surface: #{$light-surface};
+  --text-primary: #{$light-text-primary};
+  --text-secondary: #{$light-text-secondary};
+}
+
+[data-theme="dark"] {
+  --primary: #{$dark-primary};
+  --accent: #{$dark-accent};
+  --bg: #{$dark-bg};
+  --surface: #{$dark-surface};
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+}

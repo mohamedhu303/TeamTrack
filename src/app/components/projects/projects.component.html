@@ -1,0 +1,328 @@
+<div class="projects-page">
+  <!-- Header / Filters -->
+  <div class="header">
+    <h2>Projects</h2>
+    <div class="filters">
+      <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onFilterChange()" placeholder="Search projects..."
+        class="form-control" />
+
+      <ng-select [items]="projectManagers" bindLabel="name" bindValue="id" [(ngModel)]="selectedPmId"
+        (change)="onFilterChange()" placeholder="Filter by PM" class="ngselect-sm">
+      </ng-select>
+
+      <select class="form-select" [(ngModel)]="selectedStatus" (change)="onFilterChange()">
+        <option value="">All Status</option>
+        <option value="Pending">Pending</option>
+        <option value="InProgress">In Progress</option>
+        <option value="Suspended">Suspended</option>
+        <option value="Completed">Completed</option>
+      </select>
+
+      <select class="form-select" [ngModel]="pageSize" (ngModelChange)="onPageSizeChange($event)">
+        <option [ngValue]="5">5</option>
+        <option [ngValue]="10">10</option>
+        <option [ngValue]="20">20</option>
+        <option [ngValue]="50">50</option>
+      </select>
+
+      <button mat-raised-button color="primary" (click)="openCreateProjectModal()">
+        <mat-icon>add</mat-icon> New Project
+      </button>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="card shadow-sm">
+    <div class="table-responsive">
+      <table class="table align-middle mb-0">
+        <thead>
+          <tr>
+            <th class="sortable">Name</th>
+            <th>Description</th>
+            <th class="sortable">Project Manager</th>
+            <th class="sortable">Status</th>
+            <th class="sortable">Tasks</th>
+            <th class="text-end">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let p of pagedProjects">
+            <tr>
+              <td>
+                <button class="expand-btn" [class.expanded]="expandedProjectId === p.id" (click)="toggleExpand(p.id)">
+                  <mat-icon>{{ expandedProjectId === p.id ? 'expand_less' : 'expand_more' }}</mat-icon>
+                </button>
+                <span class="fw-semibold">{{ p.name }}</span>
+              </td>
+              <td class="text-truncate desc-col" [title]="p.description">{{ p.description || '-' }}</td>
+              <td>{{ p.projectManager?.name || '-' }}</td>
+              <td>
+                <span [class]="badgeClass(getStatusNumber(p.status))">
+                  {{ getProjectStatusLabel(getStatusNumber(p.status)) }}
+                </span>
+              </td>
+
+
+              <td>{{ p.tasks.length || 0 }}</td>
+              <td class="action-cell">
+                <!-- Delete Project -->
+                <div *ngIf="canDeleteProject()" class="action-half delete"
+                  (click)="$event.stopPropagation(); openDeleteModal(p)">
+                  <i class="fas fa-trash-alt"></i>
+                </div>
+
+
+                <!-- Edit Project -->
+                <div *ngIf="canEditProject(p)" class="action-half edit"
+                  (click)="$event.stopPropagation(); openEditProjectModal(p)">
+                  <i class="fas fa-edit"></i>
+                </div>
+              </td>
+            </tr>
+
+            <!-- Expanded row: tasks -->
+            <tr *ngIf="expandedProjectId === p.id">
+              <td colspan="6">
+                <div class="tasks-block">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Tasks</h6>
+                    <button class="btn btn-sm btn-primary" (click)="openTaskModal(p)">
+                      <mat-icon class="me-1">add</mat-icon> Add Task
+                    </button>
+                  </div>
+
+                  <!-- Inline Task Form -->
+                  <!-- Add Task Modal -->
+                  <div class="modal-backdrop" *ngIf="showTaskModal" (click)="closeTaskModal()"></div>
+                  <div class="modal-card" *ngIf="showTaskModal" (click)="$event.stopPropagation()">
+                    <h5 class="mb-3">{{ editingTaskId ? 'Edit Task' : 'Add Task' }}</h5>
+
+                    <div class="mb-2">
+                      <label class="form-label">Title</label><br>
+                      <input class="form-control" [(ngModel)]="taskDto.title" />
+                    </div>
+
+                    <div class="mb-2">
+                      <label class="form-label">Assignee</label>
+                      <ng-select [items]="teamMembers" bindLabel="name" bindValue="id"
+                        [(ngModel)]="taskDto.assignedUserId" placeholder="Select user">
+                      </ng-select>
+                    </div>
+
+                    <div class="mb-2">
+                      <label class="form-label">% Complete</label>
+                      <input type="number" min="0" max="100" class="form-control"
+                        [(ngModel)]="taskDto.percentComplete" />
+                    </div>
+
+                    <div class="mb-2">
+                      <label class="form-label">Start Date</label>
+                      <input type="date" class="form-control" [(ngModel)]="taskDto.startDate" />
+                    </div>
+
+                    <div class="mb-2">
+                      <label class="form-label">Finish Date</label>
+                      <input type="date" class="form-control" [(ngModel)]="taskDto.finishDate" />
+                    </div>
+
+                    <div class="mb-2">
+                      <label class="form-label">Description</label>
+                      <textarea class="form-control" rows="3" [(ngModel)]="taskDto.description"></textarea>
+                    </div>
+
+                    <div class="d-flex justify-content-end gap-2 mt-3">
+                      <button class="btn btn-light" (click)="closeTaskModal()">Cancel</button>
+                      <button class="btn btn-primary" (click)="saveTask(currentProject)">Save</button>
+                    </div>
+                  </div>
+
+                  <!-- Tasks Table -->
+                  <div class="table-responsive">
+                    <table class="table table-sm align-middle">
+                      <thead>
+                        <tr>
+                          <th>Title</th>
+                          <th>Assignee</th>
+                          <th class="w-20">Progress</th>
+                          <th>Start</th>
+                          <th>Finish</th>
+                          <th class="text-end">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let t of p.tasks">
+                          <td>{{ t.title }}</td>
+                          <td>{{ t.assignedUser?.name || '-' }}</td>
+
+                          <td class="w-20">
+                            <div class="progress" style="height: 6px;">
+                              <div class="progress-bar transition-width" role="progressbar"
+                                [style.width.%]="t.percentComplete || 0"></div>
+                            </div>
+                            <small class="text-muted">{{ t.percentComplete || 0 }}%</small>
+                          </td>
+
+                          <td>{{ (t.startDate | date:'yyyy-MM-dd') || '-' }}</td>
+                          <td>{{ (t.finishDate | date:'yyyy-MM-dd') || '-' }}</td>
+
+                          <td class="action-cell">
+                            <!-- Delete Task -->
+                            <div *ngIf="canDeleteTask(t, p)" class="action-half delete"
+                              (click)="$event.stopPropagation(); deleteTask(p, t)">
+                              <i class="fas fa-trash-alt"></i>
+                            </div>
+
+                            <!-- Edit Task -->
+                            <div *ngIf="canEditTask(t, p)" class="action-half edit"
+                              (click)="$event.stopPropagation(); openTaskModal(p, t)">
+                              <i class="fas fa-edit"></i>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Tasks not found -->
+                        <tr *ngIf="!p.tasks || p.tasks.length === 0">
+                          <td colspan="6" class="text-muted text-center">No tasks yet</td>
+                        </tr>
+                      </tbody>
+
+                    </table>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+
+        <!-- Empty state -->
+        <tbody *ngIf="projects.length === 0">
+          <tr>
+            <td colspan="6" class="text-center py-5 text-muted">
+              No projects found. Try adjusting filters.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination-wrap" *ngIf="totalProjects > pageSize">
+    <nav>
+      <ul class="pagination mb-0">
+        <li class="page-item" [class.disabled]="page===1">
+          <a class="page-link" (click)="page>1 && changePage(page-1)">Prev</a>
+        </li>
+        <li class="page-item" [class.active]="page===i"
+          *ngFor="let i of [].constructor(Math.ceil(totalProjects/pageSize)); let idx = index">
+          <a class="page-link" (click)="changePage(idx+1)">{{ idx+1 }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="page>=Math.ceil(totalProjects/pageSize)">
+          <a class="page-link" (click)="page<Math.ceil(totalProjects/pageSize) && changePage(page+1)">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Project Modal -->
+  <div class="modal-backdrop" *ngIf="showProjectModal" (click)="closeProjectModal()"></div>
+  <div class="modal-card" *ngIf="showProjectModal" (click)="$event.stopPropagation()">
+    <h5 class="mb-3">{{ editProjectId === null ? 'Create Project' : 'Edit Project' }}</h5>
+    <div class="mb-2">
+      <label class="form-label">Name</label><br>
+      <input class="form-control" [(ngModel)]="projectDto.name" />
+    </div>
+    <div class="mb-2">
+      <select class="form-select" [(ngModel)]="projectDto.status">
+        <option [ngValue]="0">Pending</option>
+        <option [ngValue]="1">In Progress</option>
+        <option [ngValue]="2">Suspended</option>
+        <option [ngValue]="3">Completed</option>
+      </select>
+    </div>
+    <div class="mb-2">
+      <label class="form-label">Project Manager</label>
+      <ng-select [items]="projectManagers" bindLabel="name" bindValue="id" [(ngModel)]="projectDto.projectManagerId"
+        placeholder="Select PM">
+      </ng-select>
+    </div>
+    <div class="mb-2">
+      <label class="form-label">Description</label>
+      <textarea class="form-control" rows="3" [(ngModel)]="projectDto.description"></textarea>
+    </div>
+    <div class="d-flex justify-content-end gap-2 mt-3">
+      <button class="btn btn-light" (click)="closeProjectModal()">Cancel</button>
+      <button class="btn btn-primary" (click)="saveProject()">Save</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Task Modal -->
+<div class="modal fade" tabindex="-1" [ngClass]="{ 'show d-block': showTaskModal }" *ngIf="showTaskModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          {{ editingTaskId ? 'Edit Task' : 'Add Task' }}
+        </h5>
+        <button type="button" class="btn-close" (click)="closeTaskModal()"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" [(ngModel)]="taskDto.title" name="title" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" [(ngModel)]="taskDto.description" name="description"></textarea>
+          </div>
+
+          <div class="mb-2">
+            <label class="form-label">Assignee</label>
+            <ng-select [items]="teamMembers" bindLabel="name" bindValue="id" [(ngModel)]="taskDto.assignedUserId"
+              placeholder="Select user">
+            </ng-select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Progress</label>
+            <input type="number" class="form-control" [(ngModel)]="taskDto.percentComplete" name="progress" />
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label class="form-label">Start Date</label>
+              <input type="date" class="form-control" [(ngModel)]="taskDto.startDate" name="startDate" />
+            </div>
+            <div class="col">
+              <label class="form-label">Finish Date</label>
+              <input type="date" class="form-control" [(ngModel)]="taskDto.finishDate" name="finishDate" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="closeTaskModal()">Cancel</button>
+        <button class="btn btn-primary" (click)="saveTask(currentProject)">
+          {{ editingTaskId ? 'Update' : 'Save' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" *ngIf="showDeleteModal">
+  <div class="modal-card">
+    <h3>Delete Project</h3>
+    <p>Are you sure you want to delete <strong>{{ projectToDelete?.name }}</strong>?</p>
+    <div class="modal-actions">
+      <button class="btn btn-secondary" (click)="cancelDelete()" style="margin-right:65%;">Cancel</button>
+      <button class="btn btn-primary" (click)="confirmDelete()">Delete</button>
+    </div>
+  </div>
+</div>

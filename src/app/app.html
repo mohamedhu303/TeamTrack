@@ -1,0 +1,16 @@
+<app-spinner *ngIf="loadingService.loading$ | async"></app-spinner>
+<router-outlet></router-outlet>
+
+<app-alert></app-alert>
+<app-theme-toggle></app-theme-toggle>
+<router-outlet></router-outlet>
+
+<label class="switch">
+  <input type="checkbox" (change)="toggleTheme($event)">
+  <span class="slider">
+    <span class="sun">☀</span>
+    <span class="moon">🌙</span>
+  </span>
+</label>
+
+

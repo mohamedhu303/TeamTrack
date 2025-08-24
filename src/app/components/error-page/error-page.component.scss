@@ -1,0 +1,40 @@
+.error-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+/* Light Mode */
+:root[data-theme="light"] {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --link-color: #3498db;
+}
+
+/* Dark Mode */
+:root[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #eee;
+  --link-color: #9b59b6;
+}
+
+/* Apply theme vars */
+.error-container {
+  background: var(--bg-color);
+  color: var(--text-color);
+}

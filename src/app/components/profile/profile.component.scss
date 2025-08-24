@@ -1,0 +1,204 @@
+/* -------------------- Core Variables -------------------- */
+$border-radius: 12px;
+$box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+
+/* -------------------- Host & Container -------------------- */
+:host {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg);
+  padding: 24px;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+/* -------------------- Typography -------------------- */
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+  transition: color 0.4s ease;
+}
+
+p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  transition: color 0.4s ease;
+}
+
+/* -------------------- Buttons -------------------- */
+button {
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin: 30px 10px;
+  background-color: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  
+  &:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background-color: #B0C4DE;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+/* -------------------- Buttons Container -------------------- */
+div[ng-reflect-ng-if="true"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+
+  > button {
+    flex: 1 1 140px; /* grow/shrink, min-width */
+    max-width: 200px;
+  }
+}
+
+.container > button {
+  margin-top: 16px;
+  width: auto;
+}
+
+/* -------------------- Modal -------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal-overlay p{
+  font-size: 1.2rem;
+}
+
+.modal {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease;
+
+  .buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button:last-child {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+
+      &:hover {
+        background-color: var(--primary);
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* -------------------- Spinner -------------------- */
+app-spinner {
+  margin: 40px 0;
+}
+
+/* -------------------- Error Messages -------------------- */
+.error {
+  color: #FF6B6B;
+  background-color: rgba(255,107,107,0.1);
+  border-left: 4px solid #FF6B6B;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: left;
+  width: 100%;
+  min-height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* -------------------- Dark Mode -------------------- */
+[data-theme="dark"] {
+  --primary: #00E5FF;
+  --accent: #001F54;
+  --bg: #0B1120;
+  --surface: #1E293B;
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+
+  button {
+    color: #fff;
+  }
+
+  .modal {
+    background-color: var(--surface);
+    color: var(--text-primary);
+  }
+
+  .modal p{
+    font-size: 18px;
+  }
+
+  .modal .buttons button:last-child {
+    color: var(--accent);
+    border-color: var(--accent);
+
+    &:hover {
+      background-color: var(--accent);
+      color: #fff;
+    }
+  }
+
+  .error {
+    color: #FF6B6B;
+    background-color: rgba(255,107,107,0.1);
+    border-left-color: #FF6B6B;
+  }
+}
+
+/* -------------------- Responsive Tweaks -------------------- */
+@media (max-width: 767px) {
+  div[ng-reflect-ng-if="true"] {
+    flex-direction: column;
+
+    > button {
+      width: 100%;
+    }
+  }
+}

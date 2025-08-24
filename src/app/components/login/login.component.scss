@@ -1,0 +1,151 @@
+/* -------------------- Core Variables -------------------- */
+$border-radius: 12px;
+$box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+/* -------------------- General Component Styling -------------------- */
+:host {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg);
+  padding: 24px;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.login-container {
+  background-color: var(--surface);
+  padding: 40px;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+
+  h2 {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    transition: color 0.6s ease-in-out;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+/* -------------------- Form Element Styling -------------------- */
+
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--text-secondary);
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+
+  background-color: rgba(var(--surface-rgb), 0.9);
+  color: var(--text-primary);
+  transition: all 0.6s ease-in-out, background-color 0.6s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--accent);
+    background-color: rgba(var(--surface-rgb), 1);
+  }
+}
+
+
+.password-field {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding-right: 2.5rem;
+  }
+
+  .toggle-eye {
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 1.1rem;
+    transition: color 0.5s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
+}
+
+/* -------------------- Button Styling -------------------- */
+button[type="submit"] {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  border: none;
+  padding: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 16px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+  &:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    background-color: #B0C4DE;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+/* -------------------- Link Styling -------------------- */
+p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  transition: color 0.6s ease-in-out;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--accent);
+  }
+}
+
+/* -------------------- Error Message Styling -------------------- */
+.error {
+  color: #FF6B6B;
+  background-color: rgba(255, 107, 107, 0.1);
+  border-left: 4px solid #FF6B6B;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: left;
+  margin-top: -8px;
+}

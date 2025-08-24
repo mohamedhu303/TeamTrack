@@ -1,0 +1,112 @@
+:root {
+  --surface: #ffffff;
+  --surface-rgb: 255,255,255;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --primary: #1a73e8;
+  --accent: #ff4081;
+  --bg: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --surface: #111827;
+  --surface-rgb: 17,24,39;
+  --text-primary: #e5e7eb;
+  --text-secondary: #94a3b8;
+  --primary: #90caf9;
+  --accent: #ff7ab6;
+  --bg: #0b1220;
+}
+
+html, body, app-root {
+  background-color: var(--surface) !important;
+  color: var(--text-primary) !important;
+  transition: background-color .6s ease, color .6s ease;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.switch {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 99999 !important;
+  display: inline-block;
+  width: 70px;
+  height: 36px;
+  transition: all var(--transition-speed) ease-in-out;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    border-radius: 34px;
+    background: linear-gradient(135deg, var(--primary), var(--accent), #ffffff10);
+    background-size: 200% 200%;
+    animation: holoMove 6s infinite linear;
+    box-shadow: 0 0 12px var(--primary), 0 0 25px var(--accent);
+    transition: background var(--transition-speed) ease-in-out,
+                box-shadow var(--transition-speed) ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 16px;
+
+    .sun {
+      color: #FFC107; // ذهبي للشمس
+      text-shadow: 0 0 6px rgba(255, 193, 7, 0.6);
+      transition: transform var(--transition-speed) ease-in-out,
+                  color var(--transition-speed) ease-in-out;
+    }
+
+    .moon {
+      color: #001F54; // كحلي للقمر
+      text-shadow: 0 0 6px rgba(0, 31, 84, 0.6);
+      transition: transform var(--transition-speed) ease-in-out,
+                  color var(--transition-speed) ease-in-out;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 28px;
+      width: 28px;
+      left: 4px;
+      bottom: 4px;
+      background: var(--surface);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--accent), 0 0 25px var(--accent);
+      transition: transform var(--transition-speed) ease-in-out,
+                  background var(--transition-speed) ease-in-out,
+                  box-shadow var(--transition-speed) ease-in-out;
+    }
+  }
+
+  input:checked + .slider {
+    background: linear-gradient(135deg, var(--bg), var(--primary), #001F54);
+    background-size: 200% 200%;
+    animation: holoMove 6s infinite linear;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(34px) rotate(360deg); // حركة smooth + دوران الكرة
+    background: var(--primary);
+    box-shadow: 0 0 15px var(--primary), 0 0 35px var(--accent);
+  }
+}
+
+@keyframes holoMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
