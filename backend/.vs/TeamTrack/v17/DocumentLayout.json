@@ -1,0 +1,898 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Y:\\C#\\Backend\\TeamTrack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\UserTaskController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Controllers\\UserTaskController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250824100959_FixRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250824100959_FixRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\TeamTrack\\TeamTrack\\Migrations\\20250726203146_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\TeamTrack\\TeamTrack\\Migrations\\20250710183436_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\VerifyPasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\VerifyPasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateUserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\UpdateUserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\UserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateProjectDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\CreateProjectDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateUserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\CreateUserDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdatePhoneDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\UpdatePhoneDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateRoleDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\UpdateRoleDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\WhatAppDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\WhatAppDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\NotifyPMDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\NotifyPMDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\INotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Services\\INotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250804134210_AddPhoneNumberAtUserTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250804134210_AddPhoneNumberAtUserTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250804132511_AddStatusInUserTaskTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250804132511_AddStatusInUserTaskTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TwilioSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\TwilioSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\NotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Services\\NotificationService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\TaskStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\Enum\\TaskStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ForgetPasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\ForgetPasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250802195403_AddOTPConfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250802195403_AddOTPConfirmation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250728145427_CreateEmailOtpTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250728145427_CreateEmailOtpTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\IJwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Services\\IJwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\JwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Services\\JwtTokenService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250728141723_AddEmailOtpTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250728141723_AddEmailOtpTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ConfirmOtpDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\ConfirmOtpDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AdminDashboardController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Controllers\\AdminDashboardController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AccountController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Controllers\\AccountController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ChangePasswordWithOtpDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\ChangePasswordWithOtpDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ResetPasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\ResetPasswordDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\EmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Services\\EmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250727111503_RenameCreatedDateToCreateDate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250727111503_RenameCreatedDateToCreateDate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250727084533_AddUserTaskTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250727084533_AddUserTaskTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateTaskDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\CreateTaskDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250726205215_InitDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Migrations\\20250726205215_InitDatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateProjectDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\UpdateProjectDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\ProjectController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Controllers\\ProjectController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\UserManagementController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Controllers\\UserManagementController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\WeatherForecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Middleware\\TokenRevocationMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Middleware\\TokenRevocationMiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\RevokedToken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\RevokedToken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\LoginDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\LoginDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\RegisterDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DTO\\RegisterDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TeamTrackDbContextFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\TeamTrackDbContextFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DataValidatation\\DataValidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\DataValidatation\\DataValidate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\UserTask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\UserTask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\Project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\ProjectStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\Enum\\ProjectStatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\UserRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\Enum\\UserRole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TeamTrackDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\TeamTrackDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TeamTrack\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 224,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 51,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250824100959_FixRelations.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250824100959_FixRelations.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250824100959_FixRelations.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250824100959_FixRelations.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250824100959_FixRelations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T10:09:59.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VerifyPasswordDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\VerifyPasswordDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\VerifyPasswordDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\VerifyPasswordDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\VerifyPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T09:24:12.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\UpdateUserDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateUserDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T13:15:55.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UserDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\UserDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UserDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T11:56:14.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateProjectDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateProjectDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\CreateProjectDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateProjectDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\CreateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T18:58:47.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\CreateUserDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateUserDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T18:43:19.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdatePhoneDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdatePhoneDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\UpdatePhoneDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdatePhoneDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\UpdatePhoneDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:36:42.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateRoleDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateRoleDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\UpdateRoleDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateRoleDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\UpdateRoleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T11:17:52.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WhatAppDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\WhatAppDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\WhatAppDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\WhatAppDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\WhatAppDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T14:53:07.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NotifyPMDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\NotifyPMDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\NotifyPMDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\NotifyPMDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\NotifyPMDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T14:17:09.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\INotificationService.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Services\\INotificationService.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\INotificationService.cs",
+              "RelativeToolTip": "TeamTrack\\Services\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T13:47:01.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250804134210_AddPhoneNumberAtUserTable.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250804134210_AddPhoneNumberAtUserTable.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250804134210_AddPhoneNumberAtUserTable.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250804134210_AddPhoneNumberAtUserTable.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250804134210_AddPhoneNumberAtUserTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T13:42:11.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20250804132511_AddStatusInUserTaskTable.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250804132511_AddStatusInUserTaskTable.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250804132511_AddStatusInUserTaskTable.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250804132511_AddStatusInUserTaskTable.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250804132511_AddStatusInUserTaskTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T13:25:12.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TwilioSettings.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TwilioSettings.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\TwilioSettings.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TwilioSettings.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\TwilioSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T12:28:41.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Services\\NotificationService.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\NotificationService.cs",
+              "RelativeToolTip": "TeamTrack\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T12:26:47.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TaskStatus.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\TaskStatus.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\Enum\\TaskStatus.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\TaskStatus.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\Enum\\TaskStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T12:19:30.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ForgetPasswordDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ForgetPasswordDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\ForgetPasswordDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ForgetPasswordDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\ForgetPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T21:26:02.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250802195403_AddOTPConfirmation.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250802195403_AddOTPConfirmation.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250802195403_AddOTPConfirmation.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250802195403_AddOTPConfirmation.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250802195403_AddOTPConfirmation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T19:54:03.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20250728145427_CreateEmailOtpTable.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250728145427_CreateEmailOtpTable.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250728145427_CreateEmailOtpTable.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250728145427_CreateEmailOtpTable.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250728145427_CreateEmailOtpTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:54:27.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IJwtTokenService.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\IJwtTokenService.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Services\\IJwtTokenService.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\IJwtTokenService.cs",
+              "RelativeToolTip": "TeamTrack\\Services\\IJwtTokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:32:59.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Services\\JwtTokenService.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\JwtTokenService.cs",
+              "RelativeToolTip": "TeamTrack\\Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:32:24.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250728141723_AddEmailOtpTable.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250728141723_AddEmailOtpTable.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250728141723_AddEmailOtpTable.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250728141723_AddEmailOtpTable.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250728141723_AddEmailOtpTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:17:23.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ConfirmOtpDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ConfirmOtpDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\ConfirmOtpDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ConfirmOtpDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\ConfirmOtpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:15:17.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AdminDashboardController.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AdminDashboardController.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Controllers\\AdminDashboardController.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AdminDashboardController.cs",
+              "RelativeToolTip": "TeamTrack\\Controllers\\AdminDashboardController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAqwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T19:36:09.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Controllers\\AccountController.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "TeamTrack\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAmwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T19:12:23.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ChangePasswordWithOtpDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ChangePasswordWithOtpDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\ChangePasswordWithOtpDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ChangePasswordWithOtpDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\ChangePasswordWithOtpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T19:11:39.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ResetPasswordDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ResetPasswordDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\ResetPasswordDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\ResetPasswordDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\ResetPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T18:43:32.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Controllers\\AuthController.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TeamTrack\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T17:01:55.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Services\\EmailSender.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Services\\EmailSender.cs",
+              "RelativeToolTip": "TeamTrack\\Services\\EmailSender.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T12:44:42.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "20250727111503_RenameCreatedDateToCreateDate.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250727111503_RenameCreatedDateToCreateDate.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250727111503_RenameCreatedDateToCreateDate.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250727111503_RenameCreatedDateToCreateDate.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250727111503_RenameCreatedDateToCreateDate.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T11:15:03.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20250727084533_AddUserTaskTable.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250727084533_AddUserTaskTable.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250727084533_AddUserTaskTable.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250727084533_AddUserTaskTable.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250727084533_AddUserTaskTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-27T08:45:33.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CreateTaskDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateTaskDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\CreateTaskDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\CreateTaskDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\CreateTaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T22:26:57.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserTaskController.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\UserTaskController.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Controllers\\UserTaskController.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\UserTaskController.cs",
+              "RelativeToolTip": "TeamTrack\\Controllers\\UserTaskController.cs",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAAABwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T21:04:47.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "20250726205215_InitDatabase.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250726205215_InitDatabase.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Migrations\\20250726205215_InitDatabase.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Migrations\\20250726205215_InitDatabase.cs",
+              "RelativeToolTip": "TeamTrack\\Migrations\\20250726205215_InitDatabase.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:52:15.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20250726203146_Initial.cs",
+              "DocumentMoniker": "Y:\\C#\\TeamTrack\\TeamTrack\\Migrations\\20250726203146_Initial.cs",
+              "RelativeDocumentMoniker": "..\\..\\TeamTrack\\TeamTrack\\Migrations\\20250726203146_Initial.cs",
+              "ToolTip": "Y:\\C#\\TeamTrack\\TeamTrack\\Migrations\\20250726203146_Initial.cs",
+              "RelativeToolTip": "..\\..\\TeamTrack\\TeamTrack\\Migrations\\20250726203146_Initial.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:31:46.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UpdateProjectDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateProjectDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\UpdateProjectDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\UpdateProjectDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\UpdateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T14:32:39.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Controllers\\ProjectController.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "TeamTrack\\Controllers\\ProjectController.cs",
+              "ViewState": "AgIAAGEBAAAAAAAAAAAAAHMBAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T08:54:59.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "UserManagementController.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\UserManagementController.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Controllers\\UserManagementController.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Controllers\\UserManagementController.cs",
+              "RelativeToolTip": "TeamTrack\\Controllers\\UserManagementController.cs",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAqwAIBAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T19:44:22.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\WeatherForecast.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\WeatherForecast.cs",
+              "RelativeToolTip": "TeamTrack\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T19:19:36.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\ApplicationUser.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T18:19:04.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "TokenRevocationMiddleware.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Middleware\\TokenRevocationMiddleware.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Middleware\\TokenRevocationMiddleware.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Middleware\\TokenRevocationMiddleware.cs",
+              "RelativeToolTip": "TeamTrack\\Middleware\\TokenRevocationMiddleware.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T18:23:00.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "RevokedToken.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\RevokedToken.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\RevokedToken.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\RevokedToken.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\RevokedToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T17:57:40.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\LoginDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\LoginDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\LoginDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T09:17:51.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DTO\\RegisterDto.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DTO\\RegisterDto.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DTO\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T09:00:23.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20250710183436_init.cs",
+              "DocumentMoniker": "Y:\\C#\\TeamTrack\\TeamTrack\\Migrations\\20250710183436_init.cs",
+              "RelativeDocumentMoniker": "..\\..\\TeamTrack\\TeamTrack\\Migrations\\20250710183436_init.cs",
+              "ToolTip": "Y:\\C#\\TeamTrack\\TeamTrack\\Migrations\\20250710183436_init.cs",
+              "RelativeToolTip": "..\\..\\TeamTrack\\TeamTrack\\Migrations\\20250710183436_init.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T18:34:36.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TeamTrackDbContextFactory.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TeamTrackDbContextFactory.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\TeamTrackDbContextFactory.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TeamTrackDbContextFactory.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\TeamTrackDbContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T18:31:04.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "DataValidate.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DataValidatation\\DataValidate.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\DataValidatation\\DataValidate.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\DataValidatation\\DataValidate.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\DataValidatation\\DataValidate.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAArwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T14:24:19.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "UserTask.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\UserTask.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\UserTask.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\UserTask.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\UserTask.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T09:00:50.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Project.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Project.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\Project.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Project.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\Project.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:51:18.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ProjectStatus.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\ProjectStatus.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\Enum\\ProjectStatus.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\ProjectStatus.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\Enum\\ProjectStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:31:56.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\UserRole.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\Enum\\UserRole.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\Enum\\UserRole.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\Enum\\UserRole.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:28:44.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\appsettings.json",
+              "RelativeDocumentMoniker": "TeamTrack\\appsettings.json",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\appsettings.json",
+              "RelativeToolTip": "TeamTrack\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-10T08:25:54.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Program.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Program.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Program.cs",
+              "RelativeToolTip": "TeamTrack\\Program.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAqwF0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:23:06.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TeamTrackDbContext.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TeamTrackDbContext.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\TeamTrackDbContext.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\TeamTrackDbContext.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\TeamTrackDbContext.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwCgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T08:21:03.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "User.cs",
+              "DocumentMoniker": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\User.cs",
+              "RelativeDocumentMoniker": "TeamTrack\\Models\\User.cs",
+              "ToolTip": "Y:\\C#\\Backend\\TeamTrack\\TeamTrack\\Models\\User.cs",
+              "RelativeToolTip": "TeamTrack\\Models\\User.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAA6wFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T17:49:45.088Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
