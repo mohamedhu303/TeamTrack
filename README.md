@@ -26,8 +26,7 @@ Built with **Angular 17** (frontend) and **ASP.NET Core 8 Web API** (backend), b
 16. [Code Quality](#code-quality)
 17. [Roadmap](#roadmap)
 18. [Contributing](#contributing)
-19. [License](#license)
-
+    
 ---
 
 ## Overview
