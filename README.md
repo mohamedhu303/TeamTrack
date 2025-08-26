@@ -2,7 +2,7 @@
 
 > A pragmatic, end‑to‑end web application for project & task tracking with enterprise‑grade authentication.
 
-Built with **Angular 17** (frontend) and **ASP.NET Core 8 Web API** (backend), backed by **SQL Server** and **Entity Framework Core**. The system emphasizes **Authentication & Authorization** (Identity + JWT + OTP), **intelligent filtering & live search**, and a clean, scalable architecture.
+Built with **Angular 17** (frontend) and **ASP.NET Core 9 Web API** (backend), backed by **SQL Server** and **Entity Framework Core**. The system emphasizes **Authentication & Authorization** (Identity + JWT + OTP), **intelligent filtering & live search**, and a clean, scalable architecture.
 
 ---
 
@@ -50,7 +50,7 @@ Key objectives:
 [Angular 17 SPA]
    │  (HTTPS, JWT Bearer)
    ▼
-[ASP.NET Core 8 Web API]
+[ASP.NET Core 9 Web API]
    │  (Services → Repositories)
    ▼
 [EF Core → SQL Server]
@@ -74,7 +74,7 @@ Key objectives:
 ## Tech Stack
 
 * **Frontend**: Angular 17 (TypeScript, RxJS, Reactive Forms, Routing)
-* **Backend**: ASP.NET Core 8 (Web API)
+* **Backend**: ASP.NET Core 9 (Web API)
 * **Database**: SQL Server
 * **ORM**: Entity Framework Core
 * **Auth**: ASP.NET Core Identity, JWT, OTP (Email & WhatsApp/Twilio), RBAC
